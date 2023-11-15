@@ -31,7 +31,6 @@ void p_error(char *dis, char *cmd, int idx)
 	char *index, masg[] = ": not found";
 
 	index = _itoa(idx);
-	
 	write(STDERR_FILENO, dis, _strlen(dis));
 	write(STDERR_FILENO, ": ", 2);
 	write(STDERR_FILENO, index, _strlen(index));
@@ -44,8 +43,8 @@ void p_error(char *dis, char *cmd, int idx)
 
 /**
  * reverse_string - reverse a string
- * @str:
- * @len:
+ * @str: string
+ * @len: length of string
  * Return: reverse string
  */
 void reverse_string(char *str, int len)

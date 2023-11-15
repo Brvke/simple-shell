@@ -9,7 +9,7 @@ char **tokenizer(char *line)
 	char *token = NULL, *tmp = NULL;
 	char **cmd = NULL;
 	int cpt = 0, i = 0;
-	
+
 	if (!line)
 		return (NULL);
 	tmp = _strdup(line);

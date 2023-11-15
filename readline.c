@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- * read_line - read a line from the standard input 
+ * read_line - read a line from the standard input
  *
  * Return: value
  */

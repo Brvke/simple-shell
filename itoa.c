@@ -50,7 +50,9 @@ char *_itoa(int value)
 		value /= 10;
 	}
 	if (ne)
+	{
 		str[i++] = '-';
+	}
 	str[i] = '\0';
 	start = ne;
 	end = i - 1;

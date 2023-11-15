@@ -29,7 +29,6 @@ int main(int ac, char **argv)
 		cmd = tokenizer(line);
 		if (!cmd)
 			continue;
-		
 		if (_builtin(cmd[0]))
 			hbuiltin(cmd, argv, stat, idx);
 		else

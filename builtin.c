@@ -23,11 +23,14 @@ int _builtin(char *cmd)
 }
 
 /**
- * hbuitin - checks for buitin functions
+ * hbuiltin - checks for builtin functions
+ * exit_shell - exits the shell
+ * print_env - prints the enviroment
  * @cmd: pointer to tokenized user input
  * @argv: pointer to main input
  * @stat: int data type
  * @idx: int data type
+ *
  * Return: 0 if success
  */
 void hbuiltin(char **cmd, char **argv, int stat, int idx)

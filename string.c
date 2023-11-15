@@ -4,7 +4,7 @@
  * _strdup - duplicate strings
  * @str: the given string
  * Return: (fail) return a null pointer
- * 	   (success) pointer to the duplicated string
+ * (success) pointer to the duplicated string
  */
 char *_strdup(const char *str)
 {
@@ -19,7 +19,7 @@ char *_strdup(const char *str)
 		str++;
 	}
 	str = str - len;
-	ptr = malloc(sizeof(char) * (len +1));
+	ptr = malloc(sizeof(char) * (len + 1));
 	if (ptr == NULL)
 		return (NULL);
 	for (i = 0; i <= len; i++)
@@ -31,7 +31,7 @@ char *_strdup(const char *str)
  * @s1: first string
  * @s2: second string
  * Return: (success) a positive number
- * 	(fail) a negative number
+ * (fail) a negative number
  */
 int _strcmp(char *s1, char *s2)
 {
