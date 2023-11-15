@@ -7,10 +7,9 @@
 char *_getpath(char *cmd)
 {
 	char *path_env, *fulcmd, *dir;
-	/*int i = 0;*/
-	/*int cmd_len = _strlen(cmd);*/
-	/*struct stat st;*/
-/*
+	int i = 0;
+	struct stat st;
+
 	for (i = 0; cmd[i]; i++)
 	{
 		if (cmd[i] == '/')
@@ -21,12 +20,12 @@ char *_getpath(char *cmd)
 			}
 			return (NULL);
 		}
-	}*/
+	}
 	path_env = _getenv("PATH");
-	/*if (!path_env)
-		return (NULL);*/
+	if (!path_env)
+		return (NULL);
 	dir = strtok(path_env, ":");
-	/*while (dir)
+	while (dir)
 	{
 		fulcmd = malloc(_strlen(dir) + _strlen(cmd) + 2);
 		if (fulcmd)
@@ -46,21 +45,4 @@ char *_getpath(char *cmd)
 	}
 	free(path_env);
 	return (NULL);
-}*/
-	while (dir != NULL)
-	{
-		fulcmd = malloc(_strlen(dir) + _strlen(cmd) + 2);
-		write(*fulcmd, dir, _strlen(dir));
-		write(*fulcmd, "/", 1);
-		write(*fulcmd, cmd, _strlen(cmd));
-	if (access(fulcmd, X_OK) == 0)
-	{
-		return (fulcmd);
-	}
-	free(fulcmd);
-	dir = strtok(NULL, ":");
-	}
-	return (NULL);
 }
-
-
